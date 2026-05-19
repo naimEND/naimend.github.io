@@ -289,6 +289,27 @@ body {
         font-size: 0.95rem;
         white-space: nowrap;
     }
+
+    .hero-bio {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-20%, -25%);
+    max-width: 700px;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(0,0,0,0.8);
+    border: 2px solid rgba(255,102,0,0.3);
+    border-radius: 20px;
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    /* FIXED ANIMATION - starts centered, just fades in */
+    opacity: 0;
+    animation: fadeInOnly 1.5s ease forwards;
+}
+
+
+    
 }
 
 
