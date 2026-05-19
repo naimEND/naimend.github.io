@@ -279,8 +279,10 @@ body {
 
     .portfolio-image {
         width: 100%;
-        min-height: 360px;
+        aspect-ratio: 16 / 9;
+        min-height: unset;
     }
+
     .portfolio-text {
         width: 100%;
         max-width: 700px;
