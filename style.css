@@ -199,29 +199,37 @@ body {
 .bio p { font-size: 1.2rem; margin-bottom: 1.5rem; opacity: 0.9; }
 
 .portfolio-main {
-    padding: 120px 3% 5%;
-    max-width: 1600px;  /* MORE SPACE */
+    position: relative;
+    z-index: 1;
+    padding: 120px 4% 5%;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .portfolio-item {
     display: flex;
     align-items: center;
-    min-height: 80vh;    /* FULL SCREEN HEIGHT */
-    padding: 6rem 2rem;  /* MORE VERTICAL SPACE */
-    border-bottom: 1px solid rgba(255,102,0,0.2);
-    gap: 4rem;           /* SPACE BETWEEN IMAGE/TEXT */
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: 85vh;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(255, 102, 0, 0.2);
+}
+
+.alternate-2 {
+    flex-direction: row-reverse;
 }
 
 .portfolio-image {
-    flex: 0 0 40%;       /* 40% IMAGE */
-    height: 70vh;        /* TALL IMAGE */
+    width: 52%;
+    min-height: 520px;
     background-size: cover;
     background-position: center;
-    border-radius: 25px;
-    border: 3px solid rgba(255,102,0,0.3);
-    transition: all 0.5s ease;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    border: 2px solid rgba(255, 102, 0, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    flex-shrink: 0;
 }
 
 .portfolio-image:hover {
@@ -231,22 +239,23 @@ body {
 }
 
 .portfolio-text {
-    flex: 0 0 50%;       /* LIMITED 50% TEXT */
-    padding: 2rem;
-    max-width: 600px;    /* NO TOO MUCH TEXT WIDTH */
+    width: 40%;
+    max-width: 480px;
 }
 
 .portfolio-text h2 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color: #FF6600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
 }
 
 .portfolio-text p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.7;
-    opacity: 0.95;
+    color: #fff;
+    opacity: 0.92;
 }
+
 
 /* ALTERNATING LAYOUT */
 .alternate-2 {
@@ -254,21 +263,21 @@ body {
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-    .portfolio-item {
-        flex-direction: column !important;
-        min-height: 70vh;
-        padding: 4rem 1rem;
+@media (max-width: 900px) {
+    .portfolio-item,
+    .alternate-2 {
+        flex-direction: column;
+        min-height: auto;
         text-align: center;
     }
+
     .portfolio-image {
-        flex: 0 0 80%;
-        height: 50vh;
-        margin-bottom: 2rem;
+        width: 100%;
+        min-height: 360px;
     }
     .portfolio-text {
-        flex: 0 0 90%;
-        max-width: none;
+        width: 100%;
+        max-width: 700px;
     }
 }
 
