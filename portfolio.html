@@ -10,57 +10,49 @@
     <nav class="header">
         <a href="index.html" class="logo">plekhanov.<span>prod</span></a>
         <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="portfolio.html" class="active">Портфолио</a></li>
-            <li><a href="prices.html">Цены</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="portfolio.html" class="active">портфолио</a></li>
+            <li><a href="prices.html">цены</a></li>
+            <li><a href="contacts.html">контакты</a></li>
         </ul>
     </nav>
-    
+
     <main class="portfolio-main">
-    <!-- EXAMPLE 1: IMAGE LEFT, TEXT RIGHT (40% image, 50% text) -->
-    <section class="portfolio-item alternate-1">
-        <div class="portfolio-image" style="background-image: url('https://raw.githubusercontent.com/naimEND/naimEND.github.io/0_pSHP9z4XFHgTAmvR (2).jpg');"></div>
-        <div class="portfolio-text">
-            <h2>Развлекательный/экспертный контент</h2>
-            <p>Съёмка видео, работа со звуком и монтаж. По запросу помощь с подготовкой сценария, подбор локаций</p>
-        </div>
-    </section>
-    
-    <!-- EXAMPLE 2: IMAGE RIGHT, TEXT LEFT -->
-    <section class="portfolio-item alternate-2">
-        <div class="portfolio-text">
-            <h2>Интервью, подкасты, опросы</h2>
-            <p> Съёмка под ключ, аренда оборудования. По запросу подбор локаций, проработка идеи</p>
-        </div>
-        <div class="portfolio-image" style="background-image: url('https://raw.githubusercontent.com/naimEND/naimEND.github.io/0_pSHP9z4XFHgTAmvR (2).jpg');"></div>
-    </section>
-    
-    <!-- EXAMPLE 3: IMAGE LEFT again -->
-    <section class="portfolio-item alternate-1">
-        <div class="portfolio-image" style="background-image: url('https://raw.githubusercontent.com/naimEND/naimEND.github.io/0_pSHP9z4XFHgTAmvR (2).jpg');"></div>
-        <div class="portfolio-text">
-            <h2>Фотосессии</h2>
-            <p>Мероприятия, автосъёмка. Большой опыт работы на детских праздниках. Возможна работа нескольких фотографов</p>
-        </div>
-    </section>
-</main>
-    
-    <!-- EXAMPLE 2: IMAGE RIGHT, TEXT LEFT -->
-    <section class="portfolio-item alternate-2">
-        <div class="portfolio-text">
-            <h2>Короткометражные фильмы</h2>
-            <p>По запросу</p>
-        </div>
-        <div class="portfolio-image" style="background-image: url('https://raw.githubusercontent.com/naimEND/naimEND.github.io/0_pSHP9z4XFHgTAmvR (2).jpg');"></div>
-    </section>
-    
-     <!-- EXAMPLE 3: IMAGE LEFT again -->
-    <section class="portfolio-item alternate-1">
-        <div class="portfolio-image" style="background-image: url('https://raw.githubusercontent.com/naimEND/naimEND.github.io/0_pSHP9z4XFHgTAmvR (2).jpg');"></div>
-        <div class="portfolio-text">
-            <h2>Репортажи</h2>
-            <p>Съёмка под ключ. По запросу помощь с подготовкий сценария, подбор локаций, поиск героев</p>
-        </div>
-    </section>
-</main>
+        <section class="portfolio-item">
+            <div class="portfolio-image" style="background-image: url('./0_pSHP9z4XFHgTAmvR.jpg');"></div>
+            <div class="portfolio-text">
+                <h2>Развлекательный / экспертный контент</h2>
+                <p>Съёмка видео, работа со звуком и монтаж. По запросу помощь с подготовкой сценария, подбор локаций.</p>
+            </div>
+        </section>
+
+        <section class="portfolio-item alternate-2">
+            <div class="portfolio-image" style="background-image: url('./0_pSHP9z4XFHgTAmvR.jpg');"></div>
+            <div class="portfolio-text">
+                <h2>Интервью, подкасты, опросы</h2>
+                <p>Съёмка под ключ, аренда оборудования. По запросу подбор локаций, проработка идеи.</p>
+            </div>
+        </section>
+
+        <section class="portfolio-item">
+            <div class="portfolio-image" style="background-image: url('./0_pSHP9z4XFHgTAmvR.jpg');"></div>
+            <div class="portfolio-text">
+                <h2>Фотосессии</h2>
+                <p>Мероприятия, автосъёмка. Большой опыт работы на детских праздниках. Возможна работа нескольких фотографов.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const links = document.querySelectorAll('.header ul a');
+
+        links.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+    });
+    </script>
+</body>
+</html>
