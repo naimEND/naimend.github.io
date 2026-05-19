@@ -306,7 +306,7 @@ body {
     /* FIXED ANIMATION - starts centered, just fades in */
     opacity: 0;
     animation: fadeInOnly 1.5s ease forwards;
-}
+    }
 
 
     
