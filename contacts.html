@@ -5,19 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты - plekhanov.prod</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const links = document.querySelectorAll('.header a');
-    
-    links.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        }
-    });
-});
-</script>
 <body>
     <nav class="header">
         <a href="index.html" class="logo">plekhanov.<span>prod</span></a>
@@ -25,14 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="index.html">Главная</a></li>
             <li><a href="portfolio.html">Портфолио</a></li>
             <li><a href="prices.html">Цены</a></li>
-            <li><a href="contacts.html" class="active">Контакты</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
         </ul>
     </nav>
-    
+
     <main class="contacts-main fade-in">
         <h1>Связаться</h1>
         <div class="platforms">
-            <!-- PASTE YOUR LINKS HERE -->
             <div class="platform">
                 <h3>Telegram</h3>
                 <p>@naimEND13</p>

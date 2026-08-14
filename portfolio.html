@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио - plekhanov.prod</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <nav class="header">
@@ -41,8 +42,8 @@
                 <p>Мероприятия, автосъёмка. Большой опыт работы на детских праздниках. Возможна работа нескольких фотографов.</p>
             </div>
         </section>
-    
-         <section class="portfolio-item alternate-2">
+
+        <section class="portfolio-item alternate-2">
             <div class="portfolio-image" style="background-image: url('img_4.png');"></div>
             <div class="portfolio-text">
                 <h2>Короткометражные фильмы</h2>
@@ -58,18 +59,5 @@
             </div>
         </section>
     </main>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        const links = document.querySelectorAll('.header ul a');
-
-        links.forEach(link => {
-            if (link.getAttribute('href') === currentPage) {
-                link.classList.add('active');
-            }
-        });
-    });
-    </script>
 </body>
 </html>
