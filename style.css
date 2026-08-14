@@ -1,4 +1,8 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -8,72 +12,31 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    border-bottom: 2px solid #FF6600; /* ORANGE BORDER */
+    border-bottom: 2px solid #FF6600;
 }
 
-.logo { 
-    font-size: 1.5rem; 
-    font-weight: 700; 
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: none;
     color: #fff;
 }
 
-.logo span { 
-    color: #FF6600 !important; /* FORCE ORANGE */
+.logo span {
+    color: #FF6600;
 }
-
-.header ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.header a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.header a:hover {
-    color: #FF6600 !important; /* ORANGE ON HOVER */
-}
-
-.header a.active {
-    color: #FF6600 !important; /* ORANGE ON ACTIVE */
-}
-
-.header a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #FF6600;
-    border-radius: 2px;
-}
-
-.logo { 
-    font-size: 1.5rem; 
-    font-weight: 700; 
-    text-decoration: none;
-    color: #fff;
-}
-
-.logo span { color: #FF6600; }
 
 .header ul {
     display: flex;
@@ -89,7 +52,8 @@ body {
     position: relative;
 }
 
-.header a:hover, .header a.active {
+.header a:hover,
+.header a.active {
     color: #FF6600;
 }
 
@@ -101,50 +65,38 @@ body {
     width: 100%;
     height: 2px;
     background: #FF6600;
+    border-radius: 2px;
 }
 
-
-
-
-
-
+/* Home */
 .hero {
-    position: fixed;      /* FIXED behind everything */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;         /* FULL viewport width */
-    height: 100vh;        /* FULL viewport height */
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1;          /* BEHIND header/content */
+    z-index: -1;
 }
 
 .hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.6);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
 }
 
-
-.main-content, .prices-main, .contacts-main {
-    position: relative;   /* Brings content above background */
+.main-content,
+.prices-main,
+.contacts-main {
+    position: relative;
     z-index: 1;
     min-height: 100vh;
-    padding: 120px 5% 5%; /* Header height + content */
+    padding: 120px 5% 5%;
     max-width: 1400px;
     margin: 0 auto;
 }
-
-
-
-
-
-
-
 
 .hero-bio {
     position: absolute;
@@ -154,23 +106,19 @@ body {
     max-width: 700px;
     text-align: center;
     padding: 3rem 2rem;
-    background: rgba(0,0,0,0.8);
-    border: 2px solid rgba(255,102,0,0.3);
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 102, 0, 0.3);
     border-radius: 20px;
     z-index: 2;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-    /* FIXED ANIMATION - starts centered, just fades in */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     opacity: 0;
     animation: fadeInOnly 1.5s ease forwards;
 }
 
-@keyframes fadeInOnly {
-    to {
-        opacity: 1;
-    }
-}
-
-.hero-bio h2 {
+.hero-bio h2,
+.bio h2,
+.prices-main h1,
+.contacts-main h1 {
     font-size: 3rem;
     margin-bottom: 2rem;
     background: linear-gradient(45deg, #fff, #FF6600);
@@ -179,25 +127,21 @@ body {
     background-clip: text;
 }
 
-
-
-.bio, .prices-main h1, .contacts-main h1 {
+.bio,
+.prices-main h1,
+.contacts-main h1 {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 4rem;
 }
 
-.bio h2, .prices-main h1, .contacts-main h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    background: linear-gradient(45deg, #fff, #FF6600);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.bio p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
 }
 
-.bio p { font-size: 1.2rem; margin-bottom: 1.5rem; opacity: 0.9; }
-
+/* Portfolio */
 .portfolio-main {
     position: relative;
     z-index: 1;
@@ -206,23 +150,23 @@ body {
     margin: 0 auto;
 }
 
-.portfolio-item {
+.portfolio-item,
+.alternate-2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
-    min-height: 85vh;
+    flex-direction: column;
+    min-height: auto;
     padding: 3rem 0;
     border-bottom: 1px solid rgba(255, 102, 0, 0.2);
-}
-
-.alternate-2 {
-    flex-direction: row-reverse;
+    text-align: center;
 }
 
 .portfolio-image {
-    width: 52%;
+    width: 100%;
     aspect-ratio: 16 / 9;
+    min-height: unset;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -232,10 +176,9 @@ body {
     flex-shrink: 0;
 }
 
-
 .portfolio-text {
-    width: 40%;
-    max-width: 480px;
+    width: 100%;
+    max-width: 700px;
 }
 
 .portfolio-text h2 {
@@ -251,89 +194,14 @@ body {
     opacity: 0.92;
 }
 
-
-/* ALTERNATING LAYOUT */
-.alternate-2 {
-    flex-direction: row-reverse;  /* FLIPS: TEXT LEFT, IMAGE RIGHT */
+/* Legacy content helpers */
+.text-right .text-content {
+    order: 1;
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0.8rem;
-        padding: 1rem 1rem 0.8rem;
-    }
-
-    .logo {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-
-    .header ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.8rem 1.2rem;
-        padding: 0;
-        margin: 0;
-    }
-
-    .header li {
-        list-style: none;
-    }
-
-    .header ul a {
-        font-size: 0.95rem;
-        white-space: nowrap;
-    }
-
-    .hero-bio {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 88vw;
-        max-width: 88vw;
-        aspect-ratio: 4 / 3;
-        padding: 1.5rem 1.2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* FIXED ANIMATION - starts centered, just fades in */
-        opacity: 0;
-        animation: fadeInOnly 1.5s ease forwards;
-    }
-
-
-    
+.text-left .text-content {
+    order: 2;
 }
-
-
-    
-    .portfolio-item,
-    .alternate-2 {
-        flex-direction: column;
-        min-height: auto;
-        text-align: center;
-    }
-
-    .portfolio-image {
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        min-height: unset;
-    }
-
-    .portfolio-text {
-        width: 100%;
-        max-width: 700px;
-    }
-}
-
-
-.text-right .text-content { order: 1; }
-.text-left .text-content { order: 2; }
 
 .text-content {
     flex: 1;
@@ -358,9 +226,10 @@ body {
 
 .image-placeholder:hover {
     transform: scale(1.02);
-    box-shadow: 0 20px 40px rgba(255,102,0,0.3);
+    box-shadow: 0 20px 40px rgba(255, 102, 0, 0.3);
 }
 
+/* Prices */
 .price-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -369,28 +238,36 @@ body {
 }
 
 .price-card {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 2.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(255,102,0,0.3);
+    border: 1px solid rgba(255, 102, 0, 0.3);
     text-align: center;
     transition: all 0.4s ease;
 }
 
 .price-card:hover {
-    background: rgba(255,102,0,0.1);
+    background: rgba(255, 102, 0, 0.1);
     transform: translateY(-10px);
     border-color: #FF6600;
 }
 
-.price-card h3 { color: #FF6600; font-size: 1.8rem; margin-bottom: 1rem; }
-.price { font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem; }
-.price-card ul { list-style: none; text-align: left; }
-.price-card li { margin-bottom: 0.5rem; opacity: 0.9; }
+.price-card h3 {
+    color: #FF6600;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
 
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
 
 .price-card ul {
     list-style: none;
+    text-align: left;
     padding-left: 2rem;
     margin: 1rem 0;
 }
@@ -402,17 +279,14 @@ body {
 }
 
 .price-card li::before {
-    content: "•";
+    content: '•';
     color: #FF6600;
     font-weight: bold;
     position: absolute;
     left: -1.5rem;
 }
 
-
-
-
-
+/* Contacts */
 .platforms {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -421,7 +295,7 @@ body {
 }
 
 .platform {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     border-radius: 15px;
     border-left: 4px solid #FF6600;
@@ -429,13 +303,16 @@ body {
 }
 
 .platform:hover {
-    background: rgba(255,102,0,0.1);
+    background: rgba(255, 102, 0, 0.1);
     transform: translateX(10px);
 }
 
-.platform h3 { color: #FF6600; margin-bottom: 1rem; }
+.platform h3 {
+    color: #FF6600;
+    margin-bottom: 1rem;
+}
 
-/* ANIMATIONS */
+/* Animations */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -448,8 +325,19 @@ body {
     animation: slideInUp 0.8s ease forwards;
 }
 
-.slide-in:nth-child(2) { animation-delay: 0.2s; }
-.slide-in:nth-child(3) { animation-delay: 0.4s; }
+.slide-in:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.slide-in:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInOnly {
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes fadeInUp {
     to {
@@ -465,3 +353,45 @@ body {
     }
 }
 
+/* Mobile */
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 1rem 1rem 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header li {
+        list-style: none;
+    }
+
+    .header ul a {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .hero-bio {
+        width: 88vw;
+        max-width: 88vw;
+        aspect-ratio: 4 / 3;
+        padding: 1.5rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
