@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0d0f">
+  <meta name="description" content="Independent documentary and commercial film production. Real stories, thoughtfully told.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Wayfare Films — Documentary & Commercial Video">
+  <meta property="og:description" content="Independent documentary and commercial filmmaking for people with stories to share.">
+  <title>Wayfare Films — Documentary & Commercial Video</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner page-gutter">
+      <a href="#top" class="wordmark" id="wordmark" aria-label="Wayfare Films, homepage">WAYFARE <span>FILMS</span><span class="wordmark-dot" aria-hidden="true">.</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="nav-contact">Let's talk <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" id="hero-media" role="img" aria-label="Working fishing dock at golden hour">
+        <video class="hero-video" id="hero-video" autoplay muted loop playsinline preload="none" hidden></video>
+      </div>
+      <div class="hero-shadow" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-content page-gutter">
+        <div class="hero-topline"><span class="live-indicator"></span><span id="hero-overline">INDEPENDENT FILM STUDIO / PROVIDENCE, RI</span></div>
+        <h1 id="hero-title">We shoot the parts of the story that don't fit in a press release<span class="accent-period">.</span></h1>
+        <div class="hero-bottom">
+          <p id="hero-subtitle">Independent documentary and commercial filmmaking for people with stories to share</p>
+          <a href="#work" class="reel-link" id="reel-link">
+            <span class="play-ring" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="m8.5 5.5 11 6.5-11 6.5z"/></svg></span>
+            <span class="reel-link-text">Watch the reel</span>
+            <span class="reel-link-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-bottomline page-gutter" aria-hidden="true">
+        <span>00:00:00:00 <span class="timecode-separator">/</span> WF—001</span>
+        <span>SCROLL TO EXPLORE <span class="scroll-arrow">↓</span></span>
+      </div>
+    </section>
+
+    <section class="work-section section-space page-gutter" id="work" aria-labelledby="work-title">
+      <div class="section-head work-head">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> SELECTED WORK / 01</div><h2 id="work-title">Stories that earned<br>their screen time<span class="accent-period">.</span></h2></div>
+        <p class="section-intro">Not just something to watch. Something to feel, remember, and talk about.</p>
+      </div>
+      <div class="work-toolbar">
+        <span class="toolbar-label">FILTER BY /</span>
+        <div class="filters" id="filters" role="group" aria-label="Filter work by category"></div>
+        <span class="work-count" id="work-count" aria-live="polite">06 PROJECTS</span>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No projects in this category yet.</p>
+    </section>
+
+    <section class="about-section section-space page-gutter" id="about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo" id="about-photo" role="img" aria-label="Filmmaker holding a camera on a dock"></div>
+          <div class="photo-timecode"><span class="red-record"></span> REC <span>00:12:34:18</span></div>
+          <div class="photo-corner tl"></div><div class="photo-corner tr"></div><div class="photo-corner bl"></div><div class="photo-corner br"></div>
+        </div>
+        <div class="about-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-line"></span> ABOUT / 02</div>
+          <h2 id="about-title">The story behind<br>the lens<span class="accent-period">.</span></h2>
+          <div class="body-copy" id="about-body"></div>
+          <div class="stats" id="stats"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section section-space page-gutter" id="services" aria-labelledby="services-title">
+      <div class="section-head services-head">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> SERVICES / 03</div><h2 id="services-title">Transparent pricing,<br>no surprises<span class="accent-period">.</span></h2></div>
+        <p class="section-intro" id="services-intro">A straightforward look at the process, day rates, and estimated timelines for each kind of film.</p>
+      </div>
+      <div class="services-grid" id="services-grid"></div>
+      <p class="pricing-note" id="pricing-note"></p>
+      <a href="#contact" class="text-cta">Start a conversation <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="contact-section section-space page-gutter" id="contact" aria-labelledby="contact-title">
+      <div class="eyebrow"><span class="eyebrow-line"></span> GET IN TOUCH / 04</div>
+      <div class="contact-content">
+        <div>
+          <h2 id="contact-title">Have a story<br>worth telling<span class="accent-period">?</span></h2>
+          <p id="contact-copy">Tell me about your next idea, even if it's still taking shape. A short note about the people, place, or question behind your project is a great place to begin.</p>
+        </div>
+        <div class="contact-details">
+          <span class="field-label">EMAIL</span>
+          <a id="contact-email" class="contact-email" href="mailto:mateo@wayfarefilms.com">mateo@wayfarefilms.com</a>
+          <span class="field-label contact-phone-label">PHONE</span>
+          <a id="contact-phone" class="contact-phone" href="tel:+14015553847">(401) 555-3847</a>
+          <a class="contact-send" id="contact-send" href="mailto:mateo@wayfarefilms.com">Let's make something <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="contact-footnote" id="contact-footnote">Working from Providence, RI · Available to travel · Email is the best way to get in touch</div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-gutter">
+    <div class="footer-main">
+      <div class="footer-brand"><a href="#top" id="footer-name">WAYFARE FILMS<span class="accent-period">.</span></a><p id="footer-description">Documentary and commercial video<br>Providence, Rhode Island</p></div>
+      <div class="footer-group"><div class="field-label">NAVIGATE</div><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+      <div class="footer-group"><div class="field-label">FOLLOW</div><div id="social-links"></div></div>
+    </div>
+    <div class="footer-bottom"><span id="copyright">© 2026 Wayfare Films. All rights reserved.</span><a href="#top" class="back-top">BACK TO TOP ↑</a></div>
+  </footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Close project">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+  <noscript><div class="noscript-message">Enable JavaScript to see the project gallery and edit-friendly portfolio content.</div></noscript>
+</body>
+</html>
